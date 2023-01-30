@@ -35,5 +35,35 @@
             <i class="fa fa-bullhorn"></i><span>{{trans('main-trans.share')}} </span>
         </div>
         <!-- share button end-->
+
+{{--        <ul class="nav navbar-nav ml-auto">--}}
+
+{{--            <div class="btn-group mb-1">--}}
+{{--                <div class="dropdown-menu">--}}
+{{--                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)--}}
+{{--                        <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">--}}
+{{--                            {{ $properties['native'] }}--}}
+{{--                        </a>--}}
+{{--                    @endforeach--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </ul>--}}
+        <div class="nav-holder fl-wrap nv-widget lang-button">
+            <nav>
+                <ul>
+                    <li>
+                        <i class="fal fa-language"></i>
+                        <a> {{trans('main-trans.lang')}} </a>
+                        <!--second level -->
+                        <ul>
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                <li><a  hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}" > {{ $properties['native'] }}  </a></li>
+                            @endforeach
+                        </ul>
+                        <!--second level end-->
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <!-- Header   end-->

@@ -10,7 +10,7 @@
                     <div class="content">
                         <div class="column-content">
                             <section  class=" parallax-section content-parallax-section" data-scrollax-parent="true" id="sec1">
-                                <div class="bg"  data-bg="{{ asset('front/images/bg/1.jpg') }}" data-scrollax="properties: { translateY: '150px' }" ></div>
+                                <div class="bg"  data-bg="{{ asset('front/images') }}/{{$contact->img}}" data-scrollax="properties: { translateY: '150px' }" ></div>
                                 <div class="overlay"></div>
                                 <div class="container">
                                     <div class="section-title">

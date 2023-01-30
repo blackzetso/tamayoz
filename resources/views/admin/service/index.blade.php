@@ -109,19 +109,19 @@
                         <div class="form-group row" dir="rtl" >
                             <label class="col-md-3 col-form-label"> الوصف </label>
                             <div class="col-md-9">
-                                <textarea name="content" ></textarea>
+                                <textarea name="desc" ></textarea>
                             </div>
                         </div>
                         <div class="form-group row" dir="rtl" >
-                            <label class="col-md-3 col-form-label"> ادنى سعر </label>
+                            <label class="col-md-3 col-form-label"> السعر </label>
                             <div class="col-md-9">
-                                <input type="text" name="min_price" class="form-control" >
+                                <input type="text" name="price" class="form-control" >
                             </div>
                         </div>
                         <div class="form-group row" dir="rtl" >
-                            <label class="col-md-3 col-form-label"> أقصى سعر </label>
+                            <label class="col-md-3 col-form-label"> الخصم </label>
                             <div class="col-md-9">
-                                <input type="text" name="max_price" class="form-control" >
+                                <input type="text" name="Discount" class="form-control" >
                             </div>
                         </div>
                         <div class="form-group row" dir="rtl" >
@@ -229,6 +229,6 @@
 @endsection
 @section('editor')
     <script>
-        CKEDITOR.replace('content');
+        CKEDITOR.replace('desc');
     </script>
 @endsection

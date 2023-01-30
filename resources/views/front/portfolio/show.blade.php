@@ -47,8 +47,23 @@
                                 <h2><span> {{ $portfolio->title }} </span></h2>
                                 <h4> {{ $portfolio->subtitle }} </h4>
                             </div>
+                            <div class="section-detail">
+                                <div class="col-md-8">
+                                    <p
+                                    @php
+                                        echo htmlspecialchars_decode($portfolio->content)
+                                    @endphp
+                                    </p>
+                                </div>+
+
+
+
+
+
+
+                            </div>
                             <div class="project-detail-wrap fl-wrap">
-                                <div class="row" dir="rtl" >
+                                <div class="row project-detail" dir="rtl" >
                                     <div class="col-md-4">
                                         <ul class="dec-list">
                                             <li style="text-align:right;direction:rtl" ><span>{{trans('main-trans.section')}} </span> : {{ $portfolio->category->name }} </li>
@@ -58,11 +73,7 @@
                                         </ul>
                                         <a href="{{ $portfolio->url }}" class="btn hide-icon mr-top" target="_blank"><i class="fas fa-caret-right"></i><span>{{trans('main-trans.show_project')}} </span></a>
                                     </div>
-                                    <div class="col-md-8">
-                                        <p>
-                                            {{ $portfolio->content }}
-                                        </p>
-                                    </div>
+
 
                                 </div>
                                 <!-- page anv end   -->

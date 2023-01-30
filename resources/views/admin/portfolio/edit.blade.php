@@ -17,19 +17,25 @@
                                 @method('PUT')
                                 @csrf
                                 <div class="form-group text-right row" dir="rtl" >
-                                    <label class="col-md-2 col-form-label"> العنوان </label>
+                                    <label class="col-md-2 col-form-label"> العنوان
+                                        <span>*</span>
+                                    </label>
                                     <div class="col-md-10">
                                         <input type="text" name="title" class="form-control" value="{{ $portfolio->title }}" >
                                     </div>
                                 </div>
                                 <div class="form-group text-right row" dir="rtl" >
-                                    <label class="col-md-2 col-form-label" for="example-email"> العنوان الفرعى </label>
+                                    <label class="col-md-2 col-form-label" for="example-email"> العنوان الفرعى
+                                        <span>*</span>
+                                    </label>
                                     <div class="col-md-10">
                                         <input type="text" name="subtitle" class="form-control" value="{{ $portfolio->subtitle }}">
                                     </div>
                                 </div>
                                 <div class="form-group text-right row" dir="rtl" >
-                                    <label class="col-md-2 col-form-label"> الوصف </label>
+                                    <label class="col-md-2 col-form-label"> الوصف
+                                        <span>*</span>
+                                    </label>
                                     <div class="col-md-10">
                                         <textarea name="content" >{{ $portfolio->content }}</textarea>
                                     </div>

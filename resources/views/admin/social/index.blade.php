@@ -107,10 +107,10 @@
                     <div class="form-group row" dir="rtl" >
                         <label class="col-md-3 col-form-label"> الأيقونة </label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" name="icon" placeholder="example : fa fa-user">
+                            <input type="text" class="form-control" name="icon" placeholder="example : fa-user">
                             <span>يمكنك اختيار المزيد من الأيقونات من خلال النقر <a href="https://fontawesome.com/v5/search" target="_blank" >هنا</a></span>
                         </div>
-                    </div> 
+                    </div>
                 </div>
                 <div class="modal-body text-right">
                     <div class="form-group row" dir="rtl" >

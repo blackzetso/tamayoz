@@ -16,13 +16,17 @@ class AboutController extends Controller
         return view('admin.about.edit',compact('about_ar','about_en'));
     }
 
+    public function img(Request $request){
+        return $request;
+    }
+
     public function update(Request $request)
-    {  
-        if($request->lang == 1){ 
-            $about = About::findOrFail(1); 
+    {
+        if($request->lang == 1){
+            $about = About::findOrFail(1);
             $content    =   $request->content;
         }else{
-            $about = About::findOrFail(2); 
+            $about = About::findOrFail(2);
             $content    =   $request->content2;
         }
 
@@ -45,7 +49,6 @@ class AboutController extends Controller
         $fileExtention = $request->file('img')->guessExtension();
         $newFileName = time().'_'.rand(10000,100000).'.'.$fileExtention;
         $request->img->move(public_path('front/images/'), $newFileName);
-
         $about = About::findOrFail($id);
         $about->update([
             'img' => $newFileName
@@ -55,5 +58,20 @@ class AboutController extends Controller
                     toastr.success('data has been updated successfully', 'success!');
                 </script>";
     }
+
+//    public function destroy($id)
+//    {
+//        $about = About::findOrfail($id);
+//        $imgName = $about->img;
+//        unlink(public_path('front/images/'.$imgName));
+//        $dell = About::where('id', $id)->where('img', 'like', 'imgName')->first();
+//        $dell->update(['img' => null]);
+//        return "<script>
+//                    toastr.success('data has been deleted successfully', 'success!');
+//                    setTimeout(function(){
+//                        window.location.reload();
+//                    }, 2000);
+//                </script>";
+//    }
 
 }

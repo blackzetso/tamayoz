@@ -46,14 +46,14 @@ Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
-    ], function(){ 
+    ], function(){
 
     Route::get('/',[HomeController::class,'home']);
     Route::get('/signin',[SigninController::class,'index'])->name('admin.login');
     Route::resource('/portfolios', PortfolioController::class);
     Route::resource('/about', AboutController::class);
-    Route::resource('/contact', ContactController::class);    
-    Route::resource('/trainings', TrainingController::class); 
+    Route::resource('/contact', ContactController::class);
+    Route::resource('/trainings', TrainingController::class);
 });
 
 Route::middleware(['check_admin','auth'])->group(function(){

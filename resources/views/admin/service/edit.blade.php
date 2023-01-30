@@ -37,19 +37,19 @@
                                 <div class="form-group text-right row" dir="rtl" >
                                     <label class="col-md-2 col-form-label"> الوصف </label>
                                     <div class="col-md-10">
-                                        <textarea name="content" >{{ $service->content }}</textarea>
+                                        <textarea name="desc" >{{ $service->content }}</textarea>
                                     </div>
                                 </div>
                                 <div class="form-group text-right row" dir="rtl" >
-                                    <label class="col-md-2 col-form-label"> أدنى سعر </label>
+                                    <label class="col-md-2 col-form-label"> السعر </label>
                                     <div class="col-md-10">
-                                        <input type="text" name="min_price" class="form-control" value="{{ $service->min_price }}" >
+                                        <input type="text" name="min_price" class="form-control" value="{{ $service->price }}" >
                                     </div>
                                 </div>
                                 <div class="form-group text-right row" dir="rtl" >
-                                    <label class="col-md-2 col-form-label"> أقصى سعر </label>
+                                    <label class="col-md-2 col-form-label"> الخصم </label>
                                     <div class="col-md-10">
-                                        <input type="text" name="max_price" class="form-control" value="{{ $service->max_price }}" >
+                                        <input type="text" name="max_price" class="form-control" value="{{ $service->Discount }}" >
                                     </div>
                                 </div>
                                 <div class="form-group row" dir="rtl" >
@@ -127,6 +127,6 @@
 @endsection
 @section('editor')
     <script>
-        CKEDITOR.replace('content');
+        CKEDITOR.replace('desc');
     </script>
 @endsection

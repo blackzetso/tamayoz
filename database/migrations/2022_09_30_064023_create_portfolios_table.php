@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('portfolios', function (Blueprint $table) {
             $table->id();
-            $table->string('img');
-            $table->string('title');
-            $table->string('subtitle');
-            $table->text('content');
-            $table->string('client');
-            $table->string('url');
-            $table->date('date');
-            $table->bigInteger('category_id');
+            $table->string('img')->nullable();
+            $table->string('title')->nullable();
+            $table->string('subtitle')->nullable();
+            $table->text('content')->nullable();
+            $table->string('client')->nullable();
+            $table->string('url')->nullable();
+            $table->date('date')->nullable();
+            $table->bigInteger('category_id')->nullable();
             $table->integer('lang')->default(1);
             $table->timestamps();
         });

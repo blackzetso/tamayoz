@@ -21,7 +21,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="profile-tab3" data-toggle="tab" href="#en" role="tab" aria-controls="profile" aria-selected="false">English</a>
-                                </li> 
+                                </li>
                             </ul>
                             <div class="tab-content border-top p-3" id="myTabContent3">
                                 <div class="tab-pane fade show active p-0" id="ar" role="tabpanel" aria-labelledby="home-tab3">
@@ -33,7 +33,7 @@
                                             <a href="javascript:void(0)" data-toggle="modal" data-target="#imageModal" >
                                                 <img src="{{ asset('front/images/') }}/{{ $about_ar->img }}" style="width: 100%" >
                                             </a>
-                                        </div>
+                                    </div>
                                     </div>
                                     <form method="POST" class="form-horizontal editForm" enctype="multipart/form-data" >
                                         @method('PUT')
@@ -68,7 +68,7 @@
                                                 <input type="text" name="button" class="form-control" value="{{ $about_ar->button }}" >
                                             </div>
                                         </div>
-                                         
+
                                         <div class="form-group text-right" >
                                             <input  type="hidden" name="id" value="{{ $about_ar->id }}" >
                                             <input  type="hidden" name="lang" value="1" >
@@ -121,7 +121,7 @@
                                                 <input type="text" name="button" class="form-control" value="{{ $about_en->button }}" >
                                             </div>
                                         </div>
-                                         
+
                                         <div class="form-group text-right" >
                                             <input  type="hidden" name="id" value="{{ $about_en->id }}" >
                                             <input  type="hidden" name="lang" value="2" >
@@ -129,7 +129,7 @@
                                             <button type="submit" class="btn btn-primary"> حفظ </button>
                                         </div>
                                     </form>
-                                </div> 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                           
+
                         </div>
                     </div>
                 </div>
@@ -148,6 +148,24 @@
 
     </section>
 
+</div>
+<div class="modal fade" id="delModal" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form id="delForm">
+                @csrf
+                <div class="modal-body text-right">
+                    هل انت متأكد من انك تريد حذف هذا العنصر ؟
+                </div>
+                <div class="modal-footer">
+
+                    <input type="hidden" class="hidden-input" name="id" value="" >
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal"> تراجع </button>
+                    <button class="btn btn-primary del-btn " type="submit"> حذف </button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 <div class="modal fade" id="imageModal" tabindex="-1" role="dialog"  aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -177,6 +195,39 @@
 @section('script')
     <script>
         //
+        // $(document).on('click','.delete',function(e){
+        //     e.preventDefault();
+        //     var id  = $(this).data('id');
+        //     $("#delModal .del-btn").attr('data-id',id);
+        //     $("#delModal .hidden-input").attr('value',id);
+        // });
+        //
+        // $(document).on('submit','#delForm',function(e){
+        //     e.preventDefault();
+        //     var idd = $('#delModal .del-btn').data('id');
+        //     var Form = $(this);
+        //     $.ajax(
+        //         {
+        //             headers: {
+        //                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        //             },
+        //             type: 'DELETE',
+        //             url: "about/" + idd,
+        //             beforeSend:function(){
+        //                 Form.find("button[type='submit']").prepend('<i class="fas fa-sync fa-spin"></i>');
+        //                 Form.find("button[type='submit']").attr('disabled','true');
+        //             },
+        //             data:new FormData(this),
+        //             contentType:false,
+        //             processData:false,
+        //             success:function(data){
+        //                 $("#tableResult").html(data);
+        //                 $('.fas').remove();
+        //                 $('#delModal').modal('hide');
+        //                 Form.find("button[type='submit']").removeAttr('disabled');
+        //             },
+        //         });
+        // });
         $(document).on('submit','.editForm',function(event){
             event.preventDefault();
             var Form = $(this);

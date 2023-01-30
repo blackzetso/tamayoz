@@ -48,6 +48,14 @@
                                                 <input type="text" name="long" class="form-control" value="{{ $contact_ar->long }}" >
                                             </div>
                                         </div>
+                                        <div class="modal-body text-right">
+                                            <div class="form-group files color row"   >
+                                                <label class="col-md-12 col-form-label text-right mb-3"> الصورة </label>
+                                                <div class="col-md-12">
+                                                    <input type="file" name="img" class="form-control1" >
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="form-group text-right row" >
                                             <div class="col-md-3" ></div>
                                             <div class="col-md-9" >
@@ -55,7 +63,7 @@
                                                 <input  type="hidden" name="lang" value="1" >
                                                 <button type="button" class="btn btn-success" data-dismiss="modal">تراجع</button>
                                                 <button type="submit" class="btn btn-primary"> حفظ </button>
-                                            </div> 
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -82,6 +90,7 @@
                                                 <input type="text" name="adress" class="form-control" value="{{ $contact_en->adress }}">
                                             </div>
                                         </div>
+
                                         <div class="form-group text-right row" >
                                             <label class="col-md-3 col-form-label"> خط العرض </label>
                                             <div class="col-md-9">
@@ -94,6 +103,14 @@
                                                 <input type="text" name="long" class="form-control" value="{{ $contact_en->long }}" >
                                             </div>
                                         </div>
+                                        <div class="modal-body text-right">
+                                            <div class="form-group files color row"   >
+                                                <label class="col-md-12 col-form-label text-right mb-3"> الصورة </label>
+                                                <div class="col-md-12">
+                                                    <input type="file" name="img" class="form-control1" >
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="form-group text-right row" >
                                             <div class="col-md-3" ></div>
                                             <div class="col-md-9" >
@@ -101,11 +118,11 @@
                                                 <input  type="hidden" name="lang" value="2" >
                                                 <button type="button" class="btn btn-success" data-dismiss="modal">تراجع</button>
                                                 <button type="submit" class="btn btn-primary"> حفظ </button>
-                                            </div> 
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -168,7 +185,7 @@
                 },
             })
         });
-       
+
     </script>
 @endsection
 @section('editor')

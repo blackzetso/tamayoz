@@ -45,7 +45,7 @@ body{
 	background:#f2f4f8;
 	height:100%;
 	text-align:center;
-} 
+}
 @-o-viewport {width: device-width;}
 @-ms-viewport {width: device-width;}
 @viewport {width: device-width;}
@@ -430,7 +430,7 @@ blockquote p {
 	background-position: center  ;
 	background-repeat:repeat;
 	background-origin: content-box;
-} 
+}
 .respimg {
 	width:100%;
 	height:auto;
@@ -535,8 +535,8 @@ header.main-header:after {
 	content:'';
 	position:absolute;
 	top:50%;
-	left:60px;
-	width:150px;
+	left:10px;
+	width: 100%;
 	height:30px;
 	margin-top:-15px;
 	background: #f2f4f8;
@@ -582,7 +582,7 @@ header.main-header:after {
     color: #000;
     font-size: 24px;
     top: -6px;
-    left: 6px; 
+    left: 6px;
     font-weight: 100;
 	display: block;
 }
@@ -603,6 +603,36 @@ header.main-header:after {
 	display: none;
 }
 /*------   Navigation ------------------------------------------------------*/
+.lang-button {
+    width: 163px;
+    right: 10px;
+    top: 11px;
+    background-color: #f7b90f;
+    float: right;
+    position: relative;
+    border-radius: 2px;
+    height: 45px;
+    line-height: 15px;
+    top: 16px;
+    color: #292929;
+    box-shadow: 0px 5px 10px 2px rgb(88 103 221 / 19%);
+}
+.nav-holder li a:hover {
+    color: #fff !important;
+}
+.nav-holder li:before{
+    content: none !important;
+}
+.nav-holder li i {
+    color: #000 !important;
+    margin-right: 5px;
+}
+.nav-holder li span.nav-dec {
+    background: #000 !important;
+}
+.nav-holder li span.nav-dec:before {
+    background: #000 !important;
+}
 .nav-holder-wrap {
 	position:fixed;
 	top:80px;
@@ -641,7 +671,7 @@ header.main-header:after {
 }
 .nav-holder {
 	position: relative;
-	z-index: 2;	
+	z-index: 2;
 }
 .nav-holder  li  {
 	position:relative;
@@ -790,7 +820,7 @@ header.main-header:after {
 /*------  footer ------------------------------------------------------*/
 .main-footer {
 	padding-left:30px;
-} 
+}
 .footer-wrap:before {
 	content:'';
 	position:absolute;
@@ -840,7 +870,7 @@ header.main-header:after {
 #subscribe {
 	float:left;
 	width:100%;
-	margin-top:20px;	
+	margin-top:20px;
 }
 #subscribe .enteremail {
 	background-color: #f1f1f1;
@@ -934,7 +964,7 @@ header.main-header:after {
 	text-transform: uppercase;
 	font-size:9px;
 	font-weight:700;
-} 
+}
 .circle-bg {
 	position:fixed;
 	width:650px;
@@ -965,7 +995,7 @@ header.main-header:after {
 	height:10px;
 	border-radius:100%;
 	background:#666;
-} 
+}
 .middle-circle {
 	position:absolute;
 	width:450px;
@@ -1075,7 +1105,7 @@ section {
 	padding:10px 0 20px;
 	border-bottom:1px solid #eee;
 	position:relative;
-} 
+}
 section.parallax-section {
 	padding:110px 0 70px;
 	overflow:hidden;
@@ -1253,7 +1283,7 @@ section.parallax-section .overlay {
 }
 .hero-item p {
 	text-align:center;
-} 
+}
 .hero-item .btn {
 	float:none;
 	display:inline-block;
@@ -1294,12 +1324,12 @@ section.parallax-section .overlay {
 	padding: 0 50px;
 	transform:scale(0.6);
 	transition: all 0.3s linear;
-	transition-delay: 1.0s; 
+	transition-delay: 1.0s;
 }
 .hero-carousel .swiper-slide-active .grid-carousel-title  {
 	opacity:1;
  	transform:scale(1.0);
-} 
+}
 .grid-carousel-title  h3 {
 	font-size:30px;
 	font-weight:800;
@@ -2079,7 +2109,7 @@ section.parallax-section .overlay {
 	margin-left:-19px;
 	z-index:1;
 	border-radius:100%;
-} 
+}
 .box-item.vis-det:hover:before {
 	opacity:1;
 	visibility:visible;
@@ -2194,7 +2224,7 @@ section.parallax-section .overlay {
 .sl-tabs li:before {
 	font-family: Font Awesome\ 5 Pro;
 	content: "\f0da";
-	position:absolute;	
+	position:absolute;
 	opacity: 0;
 	right: 15px;
 	width: 20px;
@@ -2257,17 +2287,20 @@ section.parallax-section .overlay {
 .section-title  h4:before{
 	top:100%;
 }
+.project-detail{
+    display: grid;
+}
 .dec-list {
 	float:left;
 	width:100%;
 	padding:10px 30px 10px 20px;
-	position:relative; 
+	position:relative;
 }
 .dec-list:before {
 	content:'';
 	position:absolute;
 	top:-5px;
-	left:4px;
+	right:4px;
 	bottom:-5px;
 	width:1px;
 	background:#eee;
@@ -2275,7 +2308,7 @@ section.parallax-section .overlay {
 .dec-list li:before {
 	content:'';
 	position:absolute;
-	left:-21px;
+	right:-21px;
 	width:8px;
 	height:8px;
 	border-radius:100%;
@@ -2293,7 +2326,8 @@ section.parallax-section .overlay {
 	margin:4px 0;
 	font-size:11px;
 	font-weight:700;
-} 
+}
+
 .sec-dec {
 	position: absolute;
 	right: 0;
@@ -2427,7 +2461,7 @@ section.parallax-section .overlay {
 	border-radius: 50%;
     transition: all 300ms linear;
 	z-index: 1;
-	transform: scale(1.0) 
+	transform: scale(1.0)
 }
 .order-wrap:hover:after {
 	transform: scale(1.5);
@@ -2530,7 +2564,7 @@ section.parallax-section .overlay {
 }
 .client-text {
 	padding: 35px 20px 30px 20px;
-	border-top:1px solid #eee;	
+	border-top:1px solid #eee;
 }
 .client-text p {
 	font-size:11px;
@@ -2803,7 +2837,7 @@ section.parallax-section .overlay {
 .pvlin:hover {
 	box-shadow: 0px 0px 0px 12px rgb(255 255 255 / 20%);
 	color: #000;
-} 
+}
 section.parallax-section.video-section {
 	padding:110px 0;
 }
@@ -2932,7 +2966,7 @@ section.parallax-section.video-section .overlay {
 	margin-top: -20px;
 	color:#000;
 	border-radius:100%;
-	cursor:pointer; 
+	cursor:pointer;
 	font-size:12px;
 	box-shadow: 0px 0px 0px 6px rgb(255 255 255 / 40%);
 }
@@ -2940,7 +2974,7 @@ section.parallax-section.video-section .overlay {
     transition: all 600ms linear;
 }
 .portfolio-wrap   .sw-button:hover i {
- 
+
 	transform: rotateX(360deg);
 }
 .portfolio-wrap   .sw-button i , .slider-zoom i {
@@ -3298,7 +3332,7 @@ section.parallax-section.video-section .overlay {
 	letter-spacing:1px;
 	font-size:10px;
 }
- 
+
 .text-title {
 	float:left;
 	width:100%;
@@ -3363,7 +3397,7 @@ section.parallax-section.video-section .overlay {
 	left:50%;
 	margin-left:-75px;
 	width:150px;
-	z-index:5; 
+	z-index:5;
 }
 .appn i {
 	width:30px;
@@ -3963,7 +3997,7 @@ section.parallax-section.video-section .overlay {
 	left:0;
 	width:30px;
 	height:3px;
-} 
+}
 .widget-inner {
 	float:left;
 	width:100%;
@@ -4683,7 +4717,7 @@ header.main-header {
 .piechart-holder h4 {
 	width: auto;
     position: relative;
-    left: 20px;  
+    left: 20px;
     top: 70px;
 }
 .post-container .wrap-inner {
@@ -4700,7 +4734,7 @@ header.main-header {
 }
 .header-info ul , .column-filter  {
 	background:#fff;
-}	
+}
 }
 @media only screen and  (max-width: 540px) {
 .gallery-item {
@@ -4755,7 +4789,7 @@ header.main-header{
     left: -2px;
 }
 .post-author-wrap {
- 
+
     padding-left: 70px;
 }
 .post-author-img {

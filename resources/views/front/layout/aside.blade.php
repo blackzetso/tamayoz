@@ -87,8 +87,8 @@
 
         <ul>
             @foreach ($socials as $social)
-                <li><a href="{{ $social->url }}" target="_blank"><i class="{{ $social->icon }}"></i></a></li>
-            @endforeach 
+                <li><a href="{{ $social->url }}" target="_blank"><i class="fab {{ $social->icon }}"></i></a></li>
+            @endforeach
         </ul>
     </div>
     <!-- nav-social end -->

@@ -87,9 +87,11 @@
                 </button>
             </div>
             <form id="addForm" class="form-horizontal" enctype="multipart/form-data" >
+                @csrf
                 <div class="modal-body text-right">
                         <div class="form-group row" dir="rtl" >
                             <label class="col-md-3 col-form-label"> العنوان </label>
+
                             <div class="col-md-9">
                                 <input type="text" name="title" class="form-control">
                             </div>
@@ -147,9 +149,10 @@
                         <div class="form-group files color row"   >
                             <label class="col-md-12 col-form-label"> الصورة </label>
                             <div class="col-md-12">
-                            <input type="file" name="img" class="form-control1" >
+                                <input type="file" name="img" class="form-control1" >
+                            </div>
                         </div>
-                </div>
+                    </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success" data-dismiss="modal">تراجع</button>
                     <button type="submit" class="btn btn-primary"> حفظ </button>
@@ -203,6 +206,7 @@
         $(document).on('submit','#addForm',function(event){
             event.preventDefault();
             var Form = $(this);
+            console.log(Form);
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

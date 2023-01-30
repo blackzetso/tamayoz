@@ -54,10 +54,12 @@
                                                     <img  src="./front/images/folio/{{ $row->img }}" alt="">
                                                 </a>
                                             </div>
-                                            <div class="grid-det fl-wrap">
-                                                <h3><a href="/portfolios/{{ $row->id }}" class="ajax">{{ $row->title }}</a></h3>
-                                                <span>{{ $row->category->name }}</span>
-                                            </div>
+                                            <a href="/portfolios/{{ $row->id }}">
+                                                <div class="grid-det fl-wrap">
+                                                    <h3><a href="/portfolios/{{ $row->id }}" class="ajax">{{ $row->title }}</a></h3>
+                                                    <span>{{ $row->category->name }}</span>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                     <!-- gallery-item end-->

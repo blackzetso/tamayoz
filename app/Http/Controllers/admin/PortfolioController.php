@@ -39,6 +39,7 @@ class PortfolioController extends Controller
      */
     public function store(Request $request)
     {
+
         if ($request->hasFile('img')) {
 
             $fileExtention = $request->file('img')->guessExtension();
@@ -60,11 +61,11 @@ class PortfolioController extends Controller
 
             return "<script>
                     toastr.success('data has been added successfully', 'success!');
-                   
+
                     </script>";
 
         }else{
-
+            toastr.error('data has been not added ', 'error!');
         }
     }
 

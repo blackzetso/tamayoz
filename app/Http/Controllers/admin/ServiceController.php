@@ -50,9 +50,9 @@ class ServiceController extends Controller
             'hint1'        => $request->hint1,
             'hint2'        => $request->hint2,
             'hint3'        => $request->hint3,
-            'content'      => $request->content,
-            'min_price'    => $request->min_price,
-            'max_price'    => $request->max_price,
+            'content'      => $request->desc,
+            'min_price'    => $request->price,
+            'max_price'    => $request->Discount,
             'date'         => $request->date,
             'category_id'  => $request->category,
             'img'          => $newFileName,
@@ -61,7 +61,7 @@ class ServiceController extends Controller
 
             return "<script>
                     toastr.success('data has been added successfully', 'success!');
-                 
+
                     </script>";
 
         }else{
@@ -112,7 +112,7 @@ class ServiceController extends Controller
                 'hint1'        => $request->hint1,
                 'hint2'        => $request->hint2,
                 'hint3'        => $request->hint3,
-                'content'      => $request->content,
+                'content'      => $request->desc,
                 'min_price'    => $request->min_price,
                 'max_price'    => $request->max_price,
                 'date'         => $request->date,
@@ -128,7 +128,7 @@ class ServiceController extends Controller
                 'hint1'        => $request->hint1,
                 'hint2'        => $request->hint2,
                 'hint3'        => $request->hint3,
-                'content'      => $request->content,
+                'content'      => $request->desc,
                 'min_price'    => $request->min_price,
                 'max_price'    => $request->max_price,
                 'date'         => $request->date,
